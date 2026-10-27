@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "214005137465",
+    "project_id": "app-fugas-penjamo",
+    "storage_bucket": "app-fugas-penjamo.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:214005137465:android:b811f155f565a55c6c4de8",
+        "android_client_info": {
+          "package_name": "com.example.app_prueba"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAkhrkSOcSKGqM6B5-g9prtUMMj1lzJT0M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
