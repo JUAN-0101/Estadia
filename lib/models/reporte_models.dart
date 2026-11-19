@@ -1,3 +1,5 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+
 class ReporteModel {
   final String id;
   final double latitud;
@@ -24,7 +26,7 @@ class ReporteModel {
       'fotoUrl': fotoUrl,
       'descripcion': descripcion,
       'estado': estado,
-      'fecha': fecha.toIso8601String(),
+      'fecha': Timestamp.fromDate(fecha),
     };
   }
 
@@ -36,7 +38,9 @@ class ReporteModel {
       fotoUrl: map['fotoUrl'],
       descripcion: map['descripcion'] ?? '',
       estado: map['estado'] ?? 'Pendiente',
-      fecha: DateTime.parse(map['fecha']),
+      fecha: map['fecha'] is Timestamp
+          ? (map['fecha'] as Timestamp).toDate()
+          : DateTime.tryParse(map['fecha']?.toString() ?? '') ?? DateTime.now(),
     );
   }
 }
